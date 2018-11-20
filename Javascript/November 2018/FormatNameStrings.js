@@ -24,11 +24,20 @@ function list(names){
       let name = names[i]
       if(name == names[names.length - 2]){
           
+        return name.toString() + " &"
         
+      }
+
+      if(name == name[names.length-1]){
+        return name.toString() + "."
+      }
+
+      else{
+        return name.toString + ", "
       }
       
   
     }
-      console.log(names[names.length - 2])
+      // console.log(names[names.length - 2])
   //   console.log('hello')
   }
