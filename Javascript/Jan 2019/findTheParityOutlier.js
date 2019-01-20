@@ -13,14 +13,21 @@ Should return: 160 (the only even number)
 
 */
 
+let integers = [2, 4, 0, 100, 4, 11, 2602, 36];
+
 function intCheck(intOne, intTwo) {
+  // console.log("checking");
   if (intOne % 2 === 0 && intTwo % 2 === 0) {
+    console.log("true");
     return true;
-  } else return false;
+  } else {
+    console.log("false");
+    return false;
+  }
 }
 
 function evenSearch(intArr) {
-  for (let i = 0; i <= intArr.length(); i++) {
+  for (let i = 0; i <= intArr.length; i++) {
     if (intArr[i] % 2 == 0) {
       let val = intArr[i];
       return val;
@@ -29,7 +36,7 @@ function evenSearch(intArr) {
 }
 
 function oddSearch(intArr) {
-  for (let i = 0; i <= intArr.length(); i++) {
+  for (let i = 0; i <= intArr.length; i++) {
     if (intArr[i] % 2 !== 0) {
       let val = intArr[i];
       return val;
@@ -38,19 +45,29 @@ function oddSearch(intArr) {
 }
 
 function findOutlier(integers) {
-  //your code here
   let intArr = integers;
   intArr.sort();
+  console.log(intArr);
   let intOne = intArr[0];
   let intTwo = intArr[1];
 
-  intCheck(intOne, intTwo);
-
-  if (intCheck == true) {
-    evenSearch(intArr);
-    return val;
-  } else if (intCheck == false) {
-    oddCheck(intArr);
-    return val;
+  if (intCheck(intOne, intTwo) == true) {
+    console.log("true");
+    return oddSearch(intArr);
   }
+
+  if (intCheck(intOne, intTwo) == false) {
+    console.log("false");
+    return evenSearch(intArr);
+  }
+
+  // if (intCheck == true) {
+  //   evenSearch(intArr);
+  //   return val;
+  // } else if (intCheck == false) {
+  //   oddCheck(intArr);
+  //   return val;
+  // }
 }
+
+console.log(findOutlier([2, 4, 0, 100, 4, 11, 2602, 36]));
