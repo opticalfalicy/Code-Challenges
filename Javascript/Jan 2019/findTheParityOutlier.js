@@ -16,7 +16,6 @@ Should return: 160 (the only even number)
 let integers = [2, 4, 0, 100, 4, 11, 2602, 36];
 
 function intCheck(intOne, intTwo) {
-  // console.log("checking");
   if (intOne % 2 === 0 && intTwo % 2 === 0) {
     console.log("true");
     return true;
@@ -60,14 +59,6 @@ function findOutlier(integers) {
     console.log("false");
     return evenSearch(intArr);
   }
-
-  // if (intCheck == true) {
-  //   evenSearch(intArr);
-  //   return val;
-  // } else if (intCheck == false) {
-  //   oddCheck(intArr);
-  //   return val;
-  // }
 }
 
-console.log(findOutlier([2, 4, 0, 100, 4, 11, 2602, 36]));
+console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21]));
