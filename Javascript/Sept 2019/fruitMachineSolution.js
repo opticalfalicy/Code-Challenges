@@ -1,3 +1,5 @@
+// Solution by bobbyanne
+
 /**
  * @param {string[][]} pizza 
  * @param {number[]} spin 
