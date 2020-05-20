@@ -84,6 +84,40 @@
 
 
 function damagedOrSunk (board, attacks){
+  //the battle starts here!
+
+let bArr = board;
+let aArr = attacks;
+let curAttack;
+let x = 0, y = 0;
+let i = 0;
+let sunk = 0, damaged = 0, notTouched = 0, points = 0;
+
+//iterate through attacks
+
+// for(let i = 0; i < attacks.length; i++){
+while(i < aArr.length){
+
+// loop through each attack, determine coordinates
+  for(let l = 0; l < aArr[i].length; l++){
+      x = attacks[i][0];
+      y = attacks[i][1];
+  }
+  
+  for(let j = 0; bArr[y][j]; j++){
+    if(x = j && bArr[y][j] == 0) continue;
+    
+    if(x = j && bArr[y][j] == 1) ++sunk;
+    
+//     if(x = j 
+  }
+  
+  
+  
+  
+}
+  }
+function damagedOrSunk (board, attacks){
     //the battle starts here!
   
   let bArr = board;
